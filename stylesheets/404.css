@@ -1,0 +1,55 @@
+.error-404 {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+/* 404 на заднем фоне */
+.background-404 {
+    position: absolute;
+left: calc(0px - 220px);
+    top: 200px;
+    font-size: 50vw;
+    color: rgba(0, 0, 0, 0.05);
+    /* полупрозрачный */
+    font-weight: 900;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Блок с основными фразами */
+.text-group {
+    position: absolute;
+    left: 405px;
+    top: 350px;
+    transform: translateX(-10%);
+    z-index: 1;
+    text-align: center;
+}
+
+.main-line {
+    font-size: 45px;
+    margin: 0 0 10px 0;
+}
+
+.secondary-line {
+    font-size: 35px;
+    margin: 0;
+}
+
+/* Подсказка внизу */
+.hint-line {
+    position: absolute;
+    left: 405px;
+    top: 680px;
+    transform: translateX(0px);
+    font-size: 25px;
+    z-index: 1;
+    text-align: center;
+    max-width: 600px;
+}

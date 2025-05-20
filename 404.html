@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 — Страница не найдена</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
-        .big-text {
-            font-size: 45px;
-            margin-bottom: 20px;
-        }
-        .small-text {
-            font-size: 35px;
-        }
-    </style>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/404.css" />
 </head>
+
 <body>
-    <div class="big-text">Вы попали не туда, где разыгрывается спектакль<br>Занавес не поднялся…</div>
-    <div class="small-text">Не переживайте — наши ковры укажут дорогу обратно, перезагрузите страницу.</div>
+    <div class="error-404">
+        <div class="background-404">404</div>
+
+        <div class="text-group">
+            <p class="main-line">Занавес не поднялся…</p>
+            <p class="secondary-line">Вы попали не туда, где разыгрывается спектакль</p>
+        </div>
+
+        <p class="hint-line">Не переживайте — наши ковры укажут дорогу обратно, перезагрузите страницу.</p>
+    </div>
 </body>
+
 </html>
