@@ -100,6 +100,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+//burger-menu
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const menu = document.getElementById('sideMenu');
+
+  if (burger && menu) {
+    // Открытие/закрытие меню при клике
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+
+    // Закрытие при клике вне меню
+    document.addEventListener('click', (e) => {
+      const isClickInside = menu.contains(e.target) || burger.contains(e.target);
+      if (!isClickInside) {
+        menu.classList.remove('open');
+      }
+    });
+
+    // Закрытие меню при изменении размеров экрана (например, поворот экрана)
+    window.addEventListener('resize', () => {
+      menu.classList.remove('open');
+    });
+  }
+});
 
 
 
@@ -537,6 +562,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   startSlideshow();
+});
+
+//404
+document.addEventListener("DOMContentLoaded", () => {
+  // Находим все ссылки
+  const links = document.querySelectorAll("a[href$='.html']");
+
+  links.forEach(link => {
+    link.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const href = link.getAttribute("href");
+
+      try {
+        // Пробуем запросить файл
+        const response = await fetch(href, { method: "HEAD" });
+        if (response.ok) {
+          window.location.href = href;
+        } else {
+          window.location.href = "./404.html"; 
+        }
+      } catch (error) {
+        window.location.href = "./404.html";
+      }
+    });
+  });
 });
 
 
